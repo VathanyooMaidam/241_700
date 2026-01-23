@@ -4,11 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- 1.ส่วนนี้จะไม่แสดงผลที่หน้าเว็บ -->
 </head>
-<body style="background-color: blueviolet;">
-    <!-- 2.ส่วนนี้จะไม่แสดงผลที่หน้าเว็บ -->
-     <a href="https://www.Google.com" target="_blank"> Visit Google </a>
-     
+<body>
+    <input type="radio" name="gender" value="mate" onchange="changeGender()"> Male
+    <input type="radio" name="gender" value="femate" onchange="changeGender()"> Female
+     <script>
+        function changeGender() {
+           //เลือก gender ทั้งหมด
+           let genders = document.querySelectorAll('input[name="gender"]');
+
+           //ดูว่าอันไหนมัน check
+           for (let i = 0; i < genders.length; i++) {
+              if (genders[i].checked) {
+                console.log("Gender selected: " + genders[i].value);
+              }
+           }
+        }
+
+     </script>
+
 </body>
 </html>

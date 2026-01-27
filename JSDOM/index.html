@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    ชื่อ: <input
+    id="fname"
+    class="input"
+    type="text"
+    name="fname"
+    value="ชื่อทดสอบ">
+    นามสกุล: <input
+    id="fname"
+    class="input"
+    type="text"
+    name="lname"
+    value="นามสกุลทดสอบ">
+    เบอร์โทร: <input
+    id="phone"
+    class="input"
+    type="text"
+    name="phone"
+    value="01234567885">
+
+    <input type="radio" name="gender" value="male" onchange="changeGender()">male
+    <input type="radio" name="gender" value="female" onchange="changeGender()">female
+
+    งานอดิเรก:
+    <input type="checkbox" name="fname" value="ฟุตบอล">ฟุตบอล
+    <input type="checkbox" name="fname" value="บาสเกตบอล">บาสเกตบอล
+    <input type="checkbox" name="fname" value="ว่ายน้ำ">ว่ายน้ำ
+
+    <script>
+        let inputs = document.getElementsByClassName('input');
+        console.log(inputs.length);
+        for (let i = 0; i < inputs.length; i++){
+            console.log(inputs[i].value);
+        }
+
+        /*let input = document.querySelector('input[name="fname"]');
+        console.log(input.value);*/
+
+        let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        for (let i = 0; i < checkboxes.length; i++){
+            console.log(checkboxes[i].value);
+        }
+
+        function changeGender(){
+            let genders = document.querySelectorAll('input[name="gender"]')
+
+            for(let i = 0; i < genders.length; i++){
+                if (genders[i].checked){
+                    console.log("gender selected:" + genders[i].value);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

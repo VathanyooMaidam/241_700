@@ -134,3 +134,19 @@ textarea {
 .button:active {
     transform: translateY(0); /* กดยุบลง */
 }
+.message {
+   background-color: #333;
+   padding: 10px;
+   margin-bottom: 10px;
+   border-radius: 6px;
+   display: none;
+}
+.message.success {
+   background-color: #4CAF50;
+   display: block;
+}
+
+.message.danger{
+    background-color: #ea6666;
+    display: block;
+}
